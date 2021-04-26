@@ -47,8 +47,9 @@ async function submitAssign() {
     var i = 0;
     var assignments = new Array();
     var listHeader = document.createElement('h2');
-    listHeader.setAttribute("id", titleList);
-    listHeader.innerHTML("Order to work on Assignments:");
+    listHeader.setAttribute("id", "titleList");
+    listHeader.innerHTML="Order to work on Assignments:";
+    var br5 = document.createElement('br');
     //var dueDates = new Array();
     //Reading input in each of Assignment Boxes
         document.getElementById("sub").onclick = function () {
@@ -66,9 +67,7 @@ async function submitAssign() {
                 return dateA - dateB;
             });
             console.log(assignments);
-            
             document.body.appendChild(listHeader);
-            var br5 = document.createElement('br');
             document.body.appendChild(br5);
             
     }

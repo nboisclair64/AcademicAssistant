@@ -50,6 +50,9 @@ async function submitAssign() {
     listHeader.setAttribute("id", "titleList");
     listHeader.innerHTML="Order to work on Assignments:";
     var br5 = document.createElement('br');
+    var ol1 = document.createElement('ol');
+    ol1.setAttribute("id","myOl1")
+    
     //var dueDates = new Array();
     //Reading input in each of Assignment Boxes
         document.getElementById("sub").onclick = function () {
@@ -68,7 +71,14 @@ async function submitAssign() {
             });
             console.log(assignments);
             document.body.appendChild(listHeader);
-            document.body.appendChild(br5);
+            document.body.appendChild(ol1);
+            for (i = 0; i < numofAssignments; i++){
+                var li1 = document.createElement('li');
+                console.log(assignments[i][0]);
+                li1.innerHTML = assignments[i][0];
+                document.getElementById("myOl1").appendChild(li1);
+            }
+
             
     }
     

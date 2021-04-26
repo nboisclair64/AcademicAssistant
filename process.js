@@ -17,6 +17,9 @@ async function submitTime() {
 }
 async function submitAssign() {
     var numofAssignments = document.getElementById("assignments").value;
+    var numofHours = document.getElementById("timeenter").value;
+    var percent = 100 / numofAssignments;
+    var timeEach = (numofHours / numofAssignments)*60;
     console.log(numofAssignments);
     var i = 0;
     for (i = 0; i < numofAssignments;i++) {
@@ -27,8 +30,12 @@ async function submitAssign() {
         newList.setAttribute("type", "text");
         newList.setAttribute("placeholder", "Enter Assignment");
         newList.setAttribute("id", i);
+        /*newList.setAttribute("width", "300px");
+        newList.setAttribute("height", "300px");*/
         newDate.setAttribute("type", "text");
-        newDate.setAttribute("placeholder", "Enter Due Date");
+        newDate.setAttribute("placeholder", "Due Date (YYYY-MM-DD)");
+        /*newDate.setAttribute("height", "300px");
+        newDate.setAttribute("width", "300px");*/
         newDate.setAttribute("id", "a"+i);
         document.body.appendChild(br);
         document.body.appendChild(br2);
@@ -36,6 +43,8 @@ async function submitAssign() {
         document.body.appendChild(newDate);
     }
     //Creating Add Assignments Button
+    var newDiv = document.createElement("div");
+    newDiv.setAttribute("id", "div1");
     var newBtn = document.createElement("button");
     newBtn.innerHTML = "Add Assignments";
     newBtn.setAttribute("id", "sub");
@@ -43,7 +52,8 @@ async function submitAssign() {
     var br4 = document.createElement('br');
     document.body.appendChild(br3);
     document.body.appendChild(br4);
-    document.body.appendChild(newBtn);
+    document.body.appendChild(newDiv);
+    document.getElementById("div1").appendChild(newBtn);
     var i = 0;
     var assignments = new Array();
     var listHeader = document.createElement('h2');
@@ -75,7 +85,7 @@ async function submitAssign() {
             for (i = 0; i < numofAssignments; i++){
                 var li1 = document.createElement('li');
                 console.log(assignments[i][0]);
-                li1.innerHTML = assignments[i][0];
+                li1.innerHTML = assignments[i][0]+ " - "+ percent+"%"+" - "+timeEach+" mins";
                 document.getElementById("myOl1").appendChild(li1);
             }
 

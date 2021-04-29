@@ -85,7 +85,7 @@ async function submitAssign() {
             for (i = 0; i < numofAssignments; i++){
                 var li1 = document.createElement('li');
                 console.log(assignments[i][0]);
-                li1.innerHTML = assignments[i][0]+ " - "+ percent+"%"+" - "+timeEach+" mins";
+                li1.innerHTML = assignments[i][0]+ " - "+ Math.round(percent*100)/100+"%"+" - "+timeEach+" mins";
                 document.getElementById("myOl1").appendChild(li1);
             }
 

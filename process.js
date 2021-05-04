@@ -31,6 +31,23 @@ async function startStudy(){
         }
     }, 1000);
 }
+
+async function submitBreak(){
+    var sec = 60;
+    var min = 5;
+
+    var timer = setInterval(function(){
+        document.getElementById('breakTimerDisplay').innerHTML=min+':'+ sec;
+        sec--;
+        if (sec = 0){
+            sec = 60;
+            min--;
+        }
+        if (min = 0){
+            document.getElementById('5minBreak').style.visibility = "invisible";
+        }
+    },1000);
+}
 async function submitAssign() {
     var numofAssignments = document.getElementById("assignments").value;
     var numofHours = document.getElementById("timeenter").value;

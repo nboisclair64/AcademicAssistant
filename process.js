@@ -15,6 +15,22 @@ async function submitTime() {
     console.log(time);
     return time;
 }
+async function startStudy(){
+    var sec = 60;
+    var min = 19;
+    var timer = setInterval(function(){
+        sec--;
+        document.getElementById('safeTimerDisplay').innerHTML=min+':'+sec;
+        if (sec = 0) {
+            sec=60;
+            min--;
+        }
+        if(min=0){
+            clearInterval(timer);
+            document.getElementById('5minBreak').style.visibility = "visible";
+        }
+    }, 1000);
+}
 async function submitAssign() {
     var numofAssignments = document.getElementById("assignments").value;
     var numofHours = document.getElementById("timeenter").value;

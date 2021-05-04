@@ -27,7 +27,9 @@ ol li{
     font-weight: bold;
 
 }
-
+#5minBreak{
+    visibility: hidden;
+}
 button{
     border-radius: 5px;
     font-size:14pt;

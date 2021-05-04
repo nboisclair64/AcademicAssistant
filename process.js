@@ -30,17 +30,18 @@ async function startStudy(){
         if(min<0){
             clearInterval(timer);
             document.getElementById('break').style.visibility = "visible";
+            document.getElementById('start5Min').style.visibility = "visible";
         }
     }, 1000);
 }
 
 async function submitBreak(){
     var sec = 60;
-    var min = 5;
+    var min = 4;
 
     var timer = setInterval(function(){
-        document.getElementById('breakTimerDisplay').innerHTML=min+':'+ sec;
         sec--;
+        document.getElementById('breakTimerDisplay').innerHTML=min+':'+ sec;
         if (sec < 0){
             sec = 60;
             min--;

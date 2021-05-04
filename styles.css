@@ -27,8 +27,15 @@ ol li{
     font-weight: bold;
 
 }
-#5minBreak{
+#break{
     visibility: hidden;
+
+}
+#start5Min{
+    visibility: hidden;
+}
+#startTimer{
+    width: 40%;
 }
 button{
     border-radius: 5px;
@@ -43,6 +50,9 @@ input{
     font-size: 14pt;
     margin-bottom:1%;
   
+}
+#safeTimerDisplay{
+    font-size: 25px;
 }
 #assignments{
     width:75%;

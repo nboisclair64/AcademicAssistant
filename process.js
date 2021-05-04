@@ -45,7 +45,7 @@ async function submitBreak(){
             min--;
         }
         if (min = 0){
-            document.getElementById('5minBreak').style.visibility = "invisible";
+            document.getElementById('5minBreak').style.visibility = "hidden";
         }
     },1000);
 }

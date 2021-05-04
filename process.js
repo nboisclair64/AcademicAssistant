@@ -16,6 +16,7 @@ async function submitTime() {
     return time;
 }
 async function startStudy(){
+    document.getElementById('startTimer').style.visibility="hidden";
     var sec = 60;
     var min = 19;
 
@@ -40,12 +41,13 @@ async function submitBreak(){
     var timer = setInterval(function(){
         document.getElementById('breakTimerDisplay').innerHTML=min+':'+ sec;
         sec--;
-        if (sec = 0){
+        if (sec < 0){
             sec = 60;
             min--;
         }
-        if (min = 0){
+        if (min < 0){
             document.getElementById('5minBreak').style.visibility = "hidden";
+            document.getElementById('startTimer').style.visibility="visible";
         }
     },1000);
 }

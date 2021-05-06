@@ -74,10 +74,11 @@ async function submitAssign() {
         /*newDate.setAttribute("height", "300px");
         newDate.setAttribute("width", "300px");*/
         newDate.setAttribute("id", "a"+i);
-        document.body.appendChild(br);
-        document.body.appendChild(br2);
-        document.body.appendChild(newList);
-        document.body.appendChild(newDate);
+        document.getElementById("bodySec").appendChild(br);
+        document.getElementById("bodySec").appendChild(br2);
+        document.getElementById("bodySec").appendChild(newList);
+        document.getElementById("bodySec").appendChild(newDate);
+
     }
     //Creating Add Assignments Button
     var newDiv = document.createElement("div");
@@ -87,9 +88,9 @@ async function submitAssign() {
     newBtn.setAttribute("id", "sub");
     var br3 = document.createElement('br');
     var br4 = document.createElement('br');
-    document.body.appendChild(br3);
-    document.body.appendChild(br4);
-    document.body.appendChild(newDiv);
+    document.getElementById("bodySec").appendChild(br3);
+    document.getElementById("bodySec").appendChild(br4);
+    document.getElementById("bodySec").appendChild(newDiv);
     document.getElementById("div1").appendChild(newBtn);
     var i = 0;
     var assignments = new Array();
@@ -99,7 +100,7 @@ async function submitAssign() {
     var br5 = document.createElement('br');
     var ol1 = document.createElement('ol');
     ol1.setAttribute("id","myOl1")
-    
+
     //var dueDates = new Array();
     //Reading input in each of Assignment Boxes
         document.getElementById("sub").onclick = function () {
@@ -108,7 +109,7 @@ async function submitAssign() {
                 console.log(document.getElementById("a" + i).value);
                 var temp = [document.getElementById(i).value, document.getElementById("a" + i).value];
                 assignments.push(temp);
-                
+
                 i++;
             }
             //sorts dates using '-' in between and in Year-Month-Day
@@ -117,8 +118,8 @@ async function submitAssign() {
                 return dateA - dateB;
             });
             console.log(assignments);
-            document.body.appendChild(listHeader);
-            document.body.appendChild(ol1);
+            document.getElementById("bodySec").appendChild(listHeader);
+            document.getElementById("bodySec").appendChild(ol1);
             for (i = 0; i < numofAssignments; i++){
                 var li1 = document.createElement('li');
                 console.log(assignments[i][0]);
@@ -126,12 +127,12 @@ async function submitAssign() {
                 document.getElementById("myOl1").appendChild(li1);
             }
 
-            
+
     }
-    
-    
-    
-    
+
+
+
+
 }
 compare_dates = function(date1,date2){
 

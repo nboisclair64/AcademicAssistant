@@ -53,6 +53,7 @@ async function submitBreak(){
     },1000);
 }
 async function submitAssign() {
+    submitTime();
     var numofAssignments = document.getElementById("assignments").value;
     var numofHours = document.getElementById("timeenter").value;
     var percent = 100 / numofAssignments;
@@ -86,6 +87,7 @@ async function submitAssign() {
     var newBtn = document.createElement("button");
     newBtn.innerHTML = "Add Assignments";
     newBtn.setAttribute("id", "sub");
+    newBtn.setAttribute("class", "btn btn-dark btn-sm");
     var br3 = document.createElement('br');
     var br4 = document.createElement('br');
     document.getElementById("bodySec").appendChild(br3);
@@ -118,6 +120,7 @@ async function submitAssign() {
                 return dateA - dateB;
             });
             console.log(assignments);
+            document.getElementById("bodySec").appendChild(br5);
             document.getElementById("bodySec").appendChild(listHeader);
             document.getElementById("bodySec").appendChild(ol1);
             for (i = 0; i < numofAssignments; i++){

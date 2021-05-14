@@ -68,6 +68,9 @@ input{
     width: 40%;
     font-size: 1em;
 }
+p{
+    text-align: center;
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -97,5 +100,12 @@ li a:hover {
 }
 .active{
     display: block;
+}
+.btn-dark, .btn-dark:hover, .btn-dark:active, .btn-dark:visited{
+    background-color: #333 !important;
+}
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited{
+    background-color: rgb(177, 56, 56) !important;
+    outline-width: 0px !important;
 }
 

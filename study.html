@@ -2,17 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="process.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Academic Assitant!</title>
 </head>
 <body>
-<ul>
-    <li><a class="active" href="index.html">Time Management Assistant</a></li>
-    <li><a href="study.html">Study Assitant</a> </li>
-    <li><a href="resources.html">Helpful Resources</a> </li>
-</ul>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#333">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Time Management Assistant <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="study.html">Study Assistant</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="resources.html">Helpful Resources</a>
+            </li>
+           
+          </ul>
+          
+        </div>
+      </nav>
+<div class="container-fluid">
 <div id="bodySec">
+    <br>
     <h1 id="maintitle">Academic Assitant!</h1>
     <br><br><br>
     <div id="div1">
@@ -23,6 +43,7 @@
     <button id="start5Min" onclick="submitBreak()">Start Break</button>
     <p id="breakTimerDisplay"></p>
     </div>
+</div>
 </div>
 </body>
 </html>
